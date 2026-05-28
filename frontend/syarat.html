@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syarat & Ketentuan — SatwaRental</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Satwa<span>Rental</span></a>
+    <div class="nav-links">
+      <a href="index.html" id="nav-beranda">Beranda</a>
+      <a href="barang.html" id="nav-kendaraan">Kendaraan</a>
+      <a href="tentang.html" id="nav-tentang">Tentang</a>
+      <a href="syarat.html" id="nav-syarat" class="active">Syarat & Ketentuan</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" onclick="location.href='login.html'">Masuk</button>
+      <button class="btn btn-primary" onclick="location.href='register.html'">Daftar</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="container" style="text-align:center;">
+    <div class="section-label">Legal</div>
+    <h2 class="section-title">Syarat & Ketentuan</h2>
+    <p style="color:var(--text-muted);">Terakhir diperbarui: April 2026 · Versi 1.0</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="syarat-content">
+    <div class="highlight-box">
+      <p>⚠️ Dengan mendaftar dan menggunakan SatwaRental, kamu dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan ini.</p>
+    </div>
+
+    <h3>1. Ketentuan Umum</h3>
+    <p>SatwaRental adalah platform berbasis web yang memfasilitasi sewa-menyewa barang fisik antar mahasiswa aktif. Platform ini dikelola oleh tim mahasiswa Program Studi Ilmu Komputer, Universitas Sumatera Utara.</p>
+
+    <h3>2. Persyaratan Pengguna</h3>
+    <ul>
+      <li>Pengguna wajib berstatus mahasiswa aktif dengan KTM (Kartu Tanda Mahasiswa) yang masih berlaku.</li>
+      <li>Setiap akun hanya boleh dimiliki oleh satu mahasiswa dan tidak boleh dipindahtangankan.</li>
+      <li>Pengguna bertanggung jawab atas keamanan kata sandi akun masing-masing.</li>
+      <li>Pemalsuan identitas atau KTM merupakan pelanggaran berat dan akan berakibat pemblokiran permanen.</li>
+    </ul>
+
+    <h3>3. Aturan Penyewaan</h3>
+    <ul>
+      <li>Durasi sewa dihitung dalam satuan hari kalender dengan batas pengembalian pukul 23:59 WIB.</li>
+      <li>Penyewa bertanggung jawab penuh atas keselamatan barang selama masa sewa.</li>
+      <li>Barang yang rusak selama masa sewa menjadi tanggung jawab penyewa sesuai kesepakatan.</li>
+      <li>Serah-terima barang dianjurkan dilakukan di area kampus yang aman dan terang.</li>
+    </ul>
+
+    <h3>4. Larangan Platform</h3>
+    <ul>
+      <li>Dilarang menyewakan barang ilegal, berbahaya, atau melanggar hukum.</li>
+      <li>Dilarang melakukan transaksi di luar platform untuk menghindari pengawasan sistem.</li>
+      <li>Dilarang memberikan ulasan palsu atau manipulatif.</li>
+      <li>Dilarang menggunakan platform untuk tujuan penipuan dalam bentuk apapun.</li>
+    </ul>
+
+    <h3>5. Kebijakan Privasi</h3>
+    <p>Data KTM yang diunggah hanya digunakan untuk keperluan verifikasi identitas oleh Admin dan tidak akan dibagikan kepada pihak ketiga manapun. Seluruh data disimpan dengan enkripsi dan diproteksi sesuai standar keamanan.</p>
+
+    <h3>6. Penyelesaian Sengketa</h3>
+    <p>Jika terjadi perselisihan antara penyewa dan pemilik, kedua belah pihak dapat mengajukan laporan kepada Admin melalui fitur pelaporan. Admin akan meninjau riwayat chat dan transaksi sebagai bahan pertimbangan.</p>
+
+    <h3>7. Perubahan Ketentuan</h3>
+    <p>SatwaRental berhak mengubah syarat dan ketentuan ini sewaktu-waktu. Perubahan akan diumumkan melalui notifikasi di platform dan berlaku 7 hari setelah pengumuman.</p>
+  </div>
+</div>
+
+<footer style="margin-top:72px;">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Satwa<span>Rental</span></div>
+        <p class="footer-desc">Platform sewa-menyewa barang khusus mahasiswa. Aman, terpercaya, dan terjangkau untuk kebutuhan kuliahmu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="barang.html">Katalog Barang</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="syarat.html">Syarat & Ketentuan</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a>📧 satwarental@usu.ac.id</a>
+        <a>📍 Universitas Sumatera Utara</a>
+        <a>🕐 Senin–Jumat, 08.00–17.00</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SatwaRental · Ilmu Komputer USU</span>
+      <span>Dibuat dengan ❤️ oleh Tim SatwaRental</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

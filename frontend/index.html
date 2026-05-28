@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SatwaRental — Sewa Barang Kuliah</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Satwa<span>Rental</span></a>
+    <div class="nav-links">
+      <a href="index.html" id="nav-beranda" class="active">Beranda</a>
+      <a href="barang.html" id="nav-kendaraan">Kendaraan</a>
+      <a href="tentang.html" id="nav-tentang">Tentang</a>
+      <a href="syarat.html" id="nav-syarat">Syarat & Ketentuan</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" onclick="location.href='login.html'">Masuk</button>
+      <button class="btn btn-primary" onclick="location.href='register.html'">Daftar</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✨ Platform Sewa Mahasiswa Terpercaya</div>
+    <h1>Sewa Barang Kuliah<br><span>dengan Mudah & Aman</span></h1>
+    <p>Temukan ribuan barang dan kendaraan untuk kebutuhan kuliahmu. Verifikasi KTM untuk keamanan transaksi.</p>
+    <div class="hero-btns">
+      <button class="btn btn-white btn-lg" onclick="location.href='barang.html'">Lihat Katalog →</button>
+      <button class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;" onclick="location.href='register.html'">Daftar Sekarang</button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>500+</strong><span>Barang Tersedia</span></div>
+    <div class="hero-stat"><strong>1.2K+</strong><span>Pengguna Aktif</span></div>
+    <div class="hero-stat"><strong>98%</strong><span>Kepuasan Penyewa</span></div>
+    <div class="hero-stat"><strong>0</strong><span>Kasus Penipuan</span></div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">Kenapa Memilih Kami?</div>
+      <h2 class="section-title">Platform Sewa Paling Aman<br>untuk Mahasiswa</h2>
+      <p class="section-sub">Dirancang khusus untuk ekosistem kampus dengan sistem verifikasi ketat.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Verifikasi KTM</h3>
+        <p>Setiap pengguna wajib verifikasi Kartu Tanda Mahasiswa aktif. Tidak ada akun anonim, tidak ada penipuan.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Harga Terjangkau</h3>
+        <p>Tarif sewa harian yang ramah kantong mahasiswa. Tanpa biaya tersembunyi, transparan sejak awal.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Proses Cepat</h3>
+        <p>Booking dalam hitungan menit. Konfirmasi pemilik real-time via sistem notifikasi kami.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Live Chat</h3>
+        <p>Komunikasi langsung dengan pemilik barang. Negosiasi dan koordinasi serah terima jadi mudah.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⭐</div>
+        <h3>Sistem Rating</h3>
+        <p>Ulasan dan rating pasca transaksi membangun reputasi yang jujur di komunitas kampus.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Data Terlindungi</h3>
+        <p>Enkripsi HTTPS dan proteksi data KTM. Informasi pribadimu hanya diakses untuk keperluan verifikasi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Items -->
+<section class="section">
+  <div class="container">
+    <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;">
+      <div>
+        <div class="section-label">Pilihan Populer</div>
+        <h2 class="section-title">Barang yang Sering Disewa</h2>
+      </div>
+      <button class="btn btn-outline" onclick="location.href='barang.html'">Lihat Semua →</button>
+    </div>
+    <div class="items-grid" id="featured-items"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#1e40af,#2563EB);padding:64px 0;text-align:center;">
+  <div class="container">
+    <h2 style="font-size:32px;font-weight:800;color:white;margin-bottom:12px;">Siap Mulai Menyewa?</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:28px;font-size:16px;">Daftarkan akun mahasiswamu sekarang dan mulai berhemat.</p>
+    <button class="btn btn-white btn-lg" onclick="location.href='register.html'">Daftar Gratis Sekarang →</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Satwa<span>Rental</span></div>
+        <p class="footer-desc">Platform sewa-menyewa barang khusus mahasiswa. Aman, terpercaya, dan terjangkau untuk kebutuhan kuliahmu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="barang.html">Katalog Barang</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="syarat.html">Syarat & Ketentuan</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a>📧 satwarental@usu.ac.id</a>
+        <a>📍 Universitas Sumatera Utara</a>
+        <a>🕐 Senin–Jumat, 08.00–17.00</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SatwaRental · Ilmu Komputer USU</span>
+      <span>Dibuat dengan ❤️ oleh Tim SatwaRental</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script>
+// Render featured items on landing page
+const featuredIds = ['laptop-gaming', 'motor-honda', 'kamera'];
+const featured = items.filter(i => featuredIds.includes(i.id));
+const grid = document.getElementById('featured-items');
+grid.innerHTML = featured.map(item => `
+  <div class="item-card" onclick="location.href='detail.html?id=${item.id}'">
+    <div class="item-img" style="background:${item.bg}">
+      ${item.icon} <span class="badge-avail ${item.status==='Tersedia'?'badge-green':'badge-red'}">${item.status}</span>
+    </div>
+    <div class="item-body">
+      <div class="item-type">${item.type}</div>
+      <div class="item-name">${item.name}</div>
+      <div class="item-spec">${item.specs.slice(0,2).join(' · ')}</div>
+      <div class="item-footer">
+        <div class="item-price"><strong>Rp ${item.price.toLocaleString('id-ID')}</strong><span>/hari</span></div>
+        <div class="item-rating"><span class="star">★</span> ${item.rating} (${item.reviews})</div>
+      </div>
+    </div>
+  </div>
+`).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — SatwaRental</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Satwa<span>Rental</span></a>
+    <div class="nav-links">
+      <a href="index.html" id="nav-beranda">Beranda</a>
+      <a href="barang.html" id="nav-kendaraan">Kendaraan</a>
+      <a href="tentang.html" id="nav-tentang">Tentang</a>
+      <a href="syarat.html" id="nav-syarat">Syarat & Ketentuan</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" onclick="location.href='login.html'" style="border-color:var(--blue);color:var(--blue);">Masuk</button>
+      <button class="btn btn-primary" onclick="location.href='register.html'">Daftar</button>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="auth-page">
+  <div class="auth-card">
+    <h2>Login Akun</h2>
+    <p>Masuk ke akun SatwaRental kamu</p>
+    <div class="form-group">
+      <label>Email</label>
+      <div class="input-icon">
+        <span class="icon">📧</span>
+        <input type="email" placeholder="email@mahasiswa.ac.id">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <div class="input-icon">
+        <span class="icon">🔒</span>
+        <input type="password" placeholder="Masukkan password kamu">
+      </div>
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:15px;" onclick="showToast('✅ Login berhasil! Selamat datang.')">Masuk</button>
+    <div class="auth-footer">Belum punya akun? <a href="register.html">Daftar Sekarang</a></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog Sewa — SatwaRental</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Satwa<span>Rental</span></a>
+    <div class="nav-links">
+      <a href="index.html" id="nav-beranda">Beranda</a>
+      <a href="barang.html" id="nav-kendaraan" class="active">Kendaraan</a>
+      <a href="tentang.html" id="nav-tentang">Tentang</a>
+      <a href="syarat.html" id="nav-syarat">Syarat & Ketentuan</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" onclick="location.href='login.html'">Masuk</button>
+      <button class="btn btn-primary" onclick="location.href='register.html'">Daftar</button>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="page-header">
+    <h2 style="font-size:26px;font-weight:800;margin-bottom:6px;">Katalog Sewa</h2>
+    <p style="color:var(--text-muted);margin-bottom:24px;">Temukan barang yang kamu butuhkan</p>
+  </div>
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="Cari kendaraan, laptop, kamera..." oninput="filterItems()">
+    <select id="filter-type" onchange="filterItems()">
+      <option value="">Semua Kategori</option>
+      <option value="Elektronik">Elektronik</option>
+      <option value="Kendaraan">Kendaraan</option>
+      <option value="Peralatan">Peralatan</option>
+      <option value="Buku">Buku & Referensi</option>
+    </select>
+    <select id="filter-status" onchange="filterItems()">
+      <option value="">Semua Status</option>
+      <option value="Tersedia">Tersedia</option>
+      <option value="Disewa">Sedang Disewa</option>
+    </select>
+  </div>
+  <div class="items-grid" id="items-grid"></div>
+</div>
+
+<footer style="margin-top:72px;">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Satwa<span>Rental</span></div>
+        <p class="footer-desc">Platform sewa-menyewa barang khusus mahasiswa. Aman, terpercaya, dan terjangkau untuk kebutuhan kuliahmu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="barang.html">Katalog Barang</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="syarat.html">Syarat & Ketentuan</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a>📧 satwarental@usu.ac.id</a>
+        <a>📍 Universitas Sumatera Utara</a>
+        <a>🕐 Senin–Jumat, 08.00–17.00</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SatwaRental · Ilmu Komputer USU</span>
+      <span>Dibuat dengan ❤️ oleh Tim SatwaRental</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  renderItems(items);
+});
+</script>
+</body>
+</html>

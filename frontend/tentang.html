@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Kami — SatwaRental</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Satwa<span>Rental</span></a>
+    <div class="nav-links">
+      <a href="index.html" id="nav-beranda">Beranda</a>
+      <a href="barang.html" id="nav-kendaraan">Kendaraan</a>
+      <a href="tentang.html" id="nav-tentang" class="active">Tentang</a>
+      <a href="syarat.html" id="nav-syarat">Syarat & Ketentuan</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" onclick="location.href='login.html'">Masuk</button>
+      <button class="btn btn-primary" onclick="location.href='register.html'">Daftar</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="container" style="text-align:center;">
+    <div class="section-label">Tentang Kami</div>
+    <h2 class="section-title" style="max-width:580px;margin:12px auto;">Platform Sewa Mahasiswa dari Mahasiswa</h2>
+    <p style="color:var(--text-muted);max-width:540px;margin:0 auto;">SatwaRental lahir dari kebutuhan nyata mahasiswa USU yang ingin menghemat pengeluaran dengan berbagi barang secara aman dan terorganisir.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Visi & Misi</div>
+      <h2 class="section-title">Membangun Sharing Economy<br>di Lingkungan Kampus</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Visi</h3>
+        <p>Menjadi platform sewa-menyewa mahasiswa paling terpercaya di Indonesia, yang mendorong gaya hidup hemat dan kolaboratif di lingkungan kampus.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Misi</h3>
+        <p>Memfasilitasi transaksi sewa yang aman dengan verifikasi identitas mahasiswa, menyediakan katalog barang terlengkap, dan membangun ekosistem kepercayaan berbasis ulasan komunitas.</p>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top:56px;">
+      <div class="section-label">Tim Pengembang</div>
+      <h2 class="section-title">Dibuat oleh Mahasiswa Ilmu Komputer USU</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">MA</div>
+        <h4>M. Affan Afyga</h4>
+        <p>241401141 · Backend Developer</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">RJ</div>
+        <h4>Rendy Januarta</h4>
+        <p>241401090 · Frontend Developer</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">DR</div>
+        <h4>T.M. Deryal Rasky</h4>
+        <p>241401120 · UI/UX Designer</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">OS</div>
+        <h4>Olivia G. Silitonga</h4>
+        <p>241401051 · Project Manager</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">JC</div>
+        <h4>Juan Carlos S.</h4>
+        <p>241401117 · System Analyst</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer style="margin-top:72px;">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Satwa<span>Rental</span></div>
+        <p class="footer-desc">Platform sewa-menyewa barang khusus mahasiswa. Aman, terpercaya, dan terjangkau untuk kebutuhan kuliahmu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="barang.html">Katalog Barang</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="syarat.html">Syarat & Ketentuan</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a>📧 satwarental@usu.ac.id</a>
+        <a>📍 Universitas Sumatera Utara</a>
+        <a>🕐 Senin–Jumat, 08.00–17.00</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SatwaRental · Ilmu Komputer USU</span>
+      <span>Dibuat dengan ❤️ oleh Tim SatwaRental</span>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

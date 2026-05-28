@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Barang — SatwaRental</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Satwa<span>Rental</span></a>
+    <div class="nav-links">
+      <a href="index.html" id="nav-beranda">Beranda</a>
+      <a href="barang.html" id="nav-kendaraan" class="active">Kendaraan</a>
+      <a href="tentang.html" id="nav-tentang">Tentang</a>
+      <a href="syarat.html" id="nav-syarat">Syarat & Ketentuan</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost" onclick="location.href='login.html'">Masuk</button>
+      <button class="btn btn-primary" onclick="location.href='register.html'">Daftar</button>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="barang.html">Katalog</a>
+      <span class="separator">›</span>
+      <span id="detail-breadcrumb">Detail</span>
+    </div>
+  </div>
+  <div class="detail-layout" id="detail-content"></div>
+</div>
+
+<footer style="margin-top:72px;">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Satwa<span>Rental</span></div>
+        <p class="footer-desc">Platform sewa-menyewa barang khusus mahasiswa. Aman, terpercaya, dan terjangkau untuk kebutuhan kuliahmu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <a href="index.html">Beranda</a>
+        <a href="barang.html">Katalog Barang</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="syarat.html">Syarat & Ketentuan</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <a>📧 satwarental@usu.ac.id</a>
+        <a>📍 Universitas Sumatera Utara</a>
+        <a>🕐 Senin–Jumat, 08.00–17.00</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SatwaRental · Ilmu Komputer USU</span>
+      <span>Dibuat dengan ❤️ oleh Tim SatwaRental</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL BOOKING -->
+<div class="modal-overlay" id="modal-booking">
+  <div class="modal">
+    <h3>🎉 Pemesanan Berhasil!</h3>
+    <p>Permintaan sewa kamu telah dikirim ke pemilik. Kamu akan mendapat notifikasi setelah pemilik mengkonfirmasi. Kode booking akan dikirim ke email kamu.</p>
+    <div class="modal-btns">
+      <button class="btn btn-primary" onclick="closeModal()">Oke, Mengerti</button>
+      <button class="btn btn-ghost" onclick="closeModal()">Lihat Riwayat</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script>
+function showDetail(id) {
+  const item = items.find(i => i.id === id);
+  if (!item) {
+    location.href = 'barang.html';
+    return;
+  }
+  const content = document.getElementById('detail-content');
+  document.getElementById('detail-breadcrumb').textContent = item.name;
+  content.innerHTML = `
+    <div>
+      <div class="detail-img">${item.icon}</div>
+      <div style="margin-top:24px;">
+        <span class="tag">${item.type}</span>
+        <span class="tag">${item.status}</span>
+      </div>
+      <h2 style="font-size:28px;font-weight:800;margin:12px 0 6px;">${item.name}</h2>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div class="item-rating" style="font-size:15px;"><span class="star">★</span> ${item.rating} <span style="color:var(--text-muted);font-weight:400;">(${item.reviews} ulasan)</span></div>
+        <span style="color:var(--border)">|</span>
+        <span style="font-size:14px;color:var(--text-muted);">Pemilik: <strong style="color:var(--text)">${item.owner}</strong></span>
+      </div>
+      <p style="color:var(--text-muted);line-height:1.75;margin-bottom:20px;">${item.desc}</p>
+      <h4 style="font-size:15px;font-weight:700;margin-bottom:12px;">Spesifikasi</h4>
+      <div class="detail-specs">
+        ${item.specs.map(s => `<div class="spec-item"><div class="value">${s}</div></div>`).join('')}
+      </div>
+      <div class="reviews-section">
+        <h4 style="font-size:15px;font-weight:700;margin-bottom:16px;">Ulasan Pengguna</h4>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="avatar">SR</div>
+            <div><div class="review-name">Siti Rahma · <span class="star">★★★★★</span></div><div class="review-date">3 hari lalu</div></div>
+          </div>
+          <p class="review-text">Barangnya sesuai deskripsi, pemilik ramah dan responsif. Proses serah terima lancar di kantin kampus. Pasti sewa lagi!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="avatar" style="background:var(--green);">BP</div>
+            <div><div class="review-name">Budi Pratama · <span class="star">★★★★</span></div><div class="review-date">1 minggu lalu</div></div>
+          </div>
+          <p class="review-text">Overall bagus. Kondisi barang sangat baik. Sedikit telat konfirmasi tapi akhirnya beres juga. Recommended!</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="booking-card">
+        <h3>${item.name}</h3>
+        <div class="booking-price">Rp ${item.price.toLocaleString('id-ID')}<span>/hari</span></div>
+        <div class="form-group">
+          <label>Tanggal Mulai</label>
+          <input type="date" id="start-date" onchange="calcTotal()">
+        </div>
+        <div class="form-group">
+          <label>Tanggal Selesai</label>
+          <input type="date" id="end-date" onchange="calcTotal()">
+        </div>
+        <div class="form-group">
+          <label>Lokasi Pengambilan</label>
+          <select>
+            <option>Pilih lokasi...</option>
+            <option>Perpustakaan USU</option>
+            <option>Kantin Teknik</option>
+            <option>Gedung FASILKOM</option>
+            <option>Sesuai kesepakatan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Metode Pembayaran</label>
+          <select>
+            <option>Transfer Bank (Manual)</option>
+            <option>Rekening Bersama (Escrow)</option>
+            <option>Bayar di Tempat (COD)</option>
+          </select>
+        </div>
+        <div class="total-row">
+          <span id="duration-label">Pilih tanggal</span>
+          <strong id="total-price">—</strong>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;margin-top:8px;" onclick="${item.status==='Tersedia'?'openModal()':'showToast(\"❌ Barang sedang disewa saat ini\")'}">${item.status==='Tersedia'?'🛒 Sewa Sekarang':'⏳ Sedang Disewa'}</button>
+        ${item.status==='Tersedia'?'<button class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:8px;" onclick="showToast(\'💬 Fitur chat akan tersedia setelah login\')">💬 Chat Pemilik</button>':''}
+        <div style="margin-top:16px;font-size:12px;color:var(--text-muted);text-align:center;line-height:1.6;">
+          ⚠️ Serah-terima barang dianjurkan di area kampus yang ramai dan aman.
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  if (id) {
+    showDetail(id);
+  } else {
+    location.href = 'barang.html';
+  }
+});
+</script>
+</body>
+</html>
